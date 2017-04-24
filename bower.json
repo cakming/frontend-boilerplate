@@ -1,0 +1,11 @@
+{
+    "name": "fireshell",
+    "version": "1.0.0",
+    "dependencies": {
+        "modernizr": "~2.6.2",
+        "jquery": "~1.10.2",
+        "normalize-css": "~2.1.3",
+        "bootstrap": "~3.3.7",
+        "components-font-awesome": "4.7.0"
+    }
+}
