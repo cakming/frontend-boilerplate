@@ -1,13 +1,13 @@
 {
-  "name": "fireshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "url": "http://getfireshell.com",
-  "author": "Todd Motto",
-  "copyright": "2013",
-  "version": "1.0",
+  "name": "frontendBoilerplate",
+  "title": "Quick frontend boilerplate and workflows based on Fireshell (w/ some modification for my personal use)",
+  "url": "http://koding.id",
+  "author": "Mirza Eka",
+  "copyright": "2017",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/toddmotto/fireshell.git"
+    "url": "https://github.com/cakming/frontend-boilerplate.git"
   },
   "devDependencies": {
     "bower": "^1.7.7",

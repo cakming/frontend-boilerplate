@@ -1,5 +1,5 @@
 {
-    "name": "fireshell",
+    "name": "frontend-boilerplate",
     "version": "1.0.0",
     "dependencies": {
         "modernizr": "~2.6.2",

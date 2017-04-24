@@ -44,11 +44,18 @@ module.exports = function(grunt) {
             app: 'app',
             assets: '<%= project.app %>/assets',
             css: [
+                '<%= project.src %>/components/normalize-css/normalize.css',
+                '<%= project.src %>/components/bootstrap/dist/css/bootstrap.css',
                 '<%= project.src %>/scss/style.scss'
             ],
             js: [
                 '<%= project.src %>/components/bootstrap/dist/js/bootstrap.js',
+                '<%= project.src %>/js/plugins/*.js',
                 '<%= project.src %>/js/*.js'
+            ],
+            jshint: [
+                'src/js/*.js',
+                'Gruntfile.js'
             ]
         },
 
@@ -121,10 +128,7 @@ module.exports = function(grunt) {
          * Manage the options inside .jshintrc file
          */
         jshint: {
-            files: [
-                'src/js/*.js',
-                'Gruntfile.js'
-            ],
+            files: '<%= project.jshint %>',
             options: {
                 jshintrc: '.jshintrc'
             }
@@ -225,8 +229,6 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     '<%= project.assets %>/css/style.min.css': [
-                        '<%= project.src %>/components/normalize-css/normalize.css',
-                        '<%= project.src %>/components/bootstrap/dist/css/bootstrap.css',
                         '<%= project.assets %>/css/style.unprefixed.css'
                     ]
                 }
@@ -234,8 +236,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '<%= project.assets %>/css/style.min.css': [
-                        '<%= project.src %>/components/normalize-css/normalize.css',
-                        '<%= project.src %>/components/bootstrap/dist/css/bootstrap.css',
                         '<%= project.assets %>/css/style.prefixed.css'
                     ]
                 }
