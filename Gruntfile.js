@@ -44,9 +44,13 @@ module.exports = function(grunt) {
             app: 'app',
             assets: '<%= project.app %>/assets',
             css: [
+                '<%= project.src %>/scss/style.scss'
+            ],
+            cssmin: [
                 '<%= project.src %>/components/normalize-css/normalize.css',
                 '<%= project.src %>/components/bootstrap/dist/css/bootstrap.css',
-                '<%= project.src %>/scss/style.scss'
+                '<%= project.assets %>/css/style.unprefixed.css',
+                '<%= project.assets %>/css/style.prefixed.css'
             ],
             js: [
                 '<%= project.src %>/components/bootstrap/dist/js/bootstrap.js',
@@ -228,16 +232,12 @@ module.exports = function(grunt) {
         cssmin: {
             dev: {
                 files: {
-                    '<%= project.assets %>/css/style.min.css': [
-                        '<%= project.assets %>/css/style.unprefixed.css'
-                    ]
+                    '<%= project.assets %>/css/style.min.css': '<%= project.cssmin %>'
                 }
             },
             dist: {
                 files: {
-                    '<%= project.assets %>/css/style.min.css': [
-                        '<%= project.assets %>/css/style.prefixed.css'
-                    ]
+                    '<%= project.assets %>/css/style.min.css': '<%= project.cssmin %>'
                 }
             }
         },
